@@ -2,7 +2,7 @@
 
 # Configure local repository directory
 # 로컬 레포지토리 디렉토리 설정
-REPO_PATH=~/Desktop/Dev/Storage/Auto_Jandi
+REPO_PATH=C:\Users\kueen\Desktop\Dev\Storage\Auto_Jandi
 
 # configure .txt file directory
 # .txt 파일 디렉토리 설정
