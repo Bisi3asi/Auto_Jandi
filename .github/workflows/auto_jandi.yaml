@@ -2,8 +2,8 @@ name: auto_jandi
 
 on:
   schedule:
-    - cron: '55 14 * * *'  # will be automatically executed everyday 23:50 (UTC)
-  workflow_dispatch:  # allow manual executtion
+    - cron: '58 14 * * *'  # will be automatically executed everyday 23:50 (UTC)
+  workflow_dispatch:  # allow manual execution
 
 jobs:
   auto_jandi:
@@ -29,5 +29,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.AUTO_JANDI }} # Must add Github Token name AUTO_JANDI into Actions Secret variable
+          github_token: ${{ secrets.AUTO_JANDI }} # must add github token name AUTO_JANDI into github actions secret variable
           branch : main # select branch to push
