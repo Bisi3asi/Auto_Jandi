@@ -2,11 +2,11 @@ name: auto_jandi
 
 on:
   schedule:
-    - cron: '50 23 * * *'  # 매일 23시 50분에 실행
-  workflow_dispatch:  # 수동 실행을 허용
+    - cron: '50 23 * * *'  # will be automatically executed everyday 23:50
+  workflow_dispatch:  # allow manual executtion
 
 jobs:
-  daily-update:
+  auto_jandi:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,4 +29,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.AUTO_JANDI }}
+          github_token: ${{ secrets.AUTO_JANDI }} # Must add Github Token name AUTO_JANDI into Actions Secret variable
+          branch : main # select branch to push
