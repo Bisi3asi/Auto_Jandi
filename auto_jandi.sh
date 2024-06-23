@@ -32,7 +32,7 @@ echo "Jandi, $CURRENT_DATE" >> $FILE_PATH
 # git commit and push
 # 변경 내용 Git에 커밋 및 푸시
 git add $FILE_PATH
-git commit -m "Jandi automatically Updated on $CURRENT_DATE"
+git commit -m "Jandi automatically Updated on $CURRENT_DATE (By WSL CRON)"
 git push
 
 # echo success message
