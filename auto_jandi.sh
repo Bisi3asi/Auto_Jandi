@@ -27,7 +27,7 @@ fi
 
 # content of file
 # 파일 내용 일일단위 변경(개행 포함)
-echo "Jandi, $CURRENT_DATE" >> $FILE_PATH
+echo "Jandi automatically Updated on $CURRENT_DATE" >> $FILE_PATH
 
 # git commit and push
 # 변경 내용 Git에 커밋 및 푸시
