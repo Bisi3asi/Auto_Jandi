@@ -1,0 +1,32 @@
+name: auto_jandi
+
+on:
+  schedule:
+    - cron: '50 23 * * *'  # 매일 23시 50분에 실행
+  workflow_dispatch:  # 수동 실행을 허용
+
+jobs:
+  daily-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update file with date
+        run: |
+          if [ ! -f $GITHUB_WORKSPACE/auto_jandi_log.txt ]; then
+            touch $GITHUB_WORKSPACE/auto_jandi_log.txt
+          fi
+          echo "Jandi automatically Updated on $(date +'%Y-%m-%d')" >> $GITHUB_WORKSPACE/auto_jandi_log.txt
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'Bisi3asi'
+          git config --global user.email 'kueeng8008@naver.com'
+          git add $GITHUB_WORKSPACE/auto_jandi_log.txt
+          git commit -m "Jandi automatically Updated on $(date +'%Y-%m-%d')"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.AUTO_JANDI }}
