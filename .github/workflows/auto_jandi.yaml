@@ -2,7 +2,7 @@ name: auto_jandi
 
 on:
   schedule:
-    - cron: '50 23 * * *'  # will be automatically executed everyday 23:50
+    - cron: '55 14 * * *'  # will be automatically executed everyday 23:50 (UTC)
   workflow_dispatch:  # allow manual executtion
 
 jobs:

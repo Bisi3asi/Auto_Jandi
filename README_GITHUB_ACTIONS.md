@@ -27,3 +27,7 @@
 ### 테스트 방법 (How to Test)
 * Repository -> Actions -> auto_jandi -> Run workflow -> run workflow
 * 위는 수동으로 실행하는 방법입니다. (this is how to test the workflow manually)
+
+### 유의사항 (Notioce)
+* Github Actions의 cron은 UCT를 기준으로 합니다. (Github Actions cron follows UCT time)
+* 따라서, 한국 시간 기준으로 23:50분을 설정하고자 한다면 9시간 앞당긴 14:50으로 설정해야 합니다.
