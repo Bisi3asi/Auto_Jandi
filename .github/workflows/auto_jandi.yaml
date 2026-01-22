@@ -1,8 +1,8 @@
 name: auto_jandi
 
 on:
-  schedule:
-    - cron: '03 15 * * *'  # will be automatically executed everyday 23:50 (UTC)
+  # schedule: # [important] delete this # mark below 2 if you want to schedule every day
+  #  - cron: '50 23 * * *'  # will be automatically executed everyday 23:50 (UTC)
   workflow_dispatch:  # allow manual execution
 
 jobs:
